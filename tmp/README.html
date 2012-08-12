@@ -1,0 +1,60 @@
+<h1>wikiwikivim</h1>
+
+<p>wwvim aims to be a very light-weight implementation of a vim <a href="http://c2.com/cgi/wiki?PersonalWiki">personal wiki</a>. It leverages existing features like the <a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#jumplist">jumplist</a>, and the shortcuts should be intuitive to anyone used to browsing vim's help system. </p>
+
+<h2>Getting Started</h2>
+
+<p>To install wwvim, use Tim Pope's excellent <a href="https://github.com/tpope/vim-pathogen/">pathogen</a> plugin. Just checkout this repository into ~/.vim/bundle/wwvim</p>
+
+<p>To create a new wiki, make a directory anywhere. Inside this, create a file called index.wiki. Open it in vim. </p>
+
+<p>This is your home entry (it can be called anything you like, but index is the convention). </p>
+
+<p>Type the following into it, then save:</p>
+
+<pre><code>This is the home page of my wiki. 
+
+I can go to AnotherWikiPage from here.
+</code></pre>
+
+<p>Now position your cursor over the text <em>AnotherWikiPage</em> and press Enter. </p>
+
+<p>wwvim will take you to the wiki entry for AnotherWikiPage. Edit this to your heart's content, save, and press <a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#CTRL-O">Ctrl-O</a>. Ctrl-O takes you back to previous locations. If you've moved around AnotherWikiPage a lot, you may have to press it multiple times. Soon you'll be back on the index page. </p>
+
+<p>Congratulations! You've just made your own personal wiki. </p>
+
+<h2>Usage</h2>
+
+<p>Pressing &lt;CR&gt; will take you to the wiki entry for that word. (any word can have a wiki entry)</p>
+
+<p>This is a buffer local mapping, and only applies to files with the .wiki extension. </p>
+
+<p>If an entry does not exist, it will be created (although technically not unless you save the file).</p>
+
+<p>To go back to the previous entry, use Ctrl-O (see also :help jumplist)</p>
+
+<p>You can also use Ctrl-] (go to tag) to the same effect.</p>
+
+<p>There is no change tracking built in -- use git or hg (or darcs or bzr or svn or ...)</p>
+
+<p>wwvim does not specify a format for your entries. I use plaintext, but one could also use markdown or a number of other excellent solutions. Unfortunately, wwvim currently relies on the filetype being set to wiki, which breaks markdown syntax highlighting. This will hopefully be fixed in a future version. </p>
+
+<p>For a more "complete" implementation of personal wikis in vim, consider <a href="https://code.google.com/p/vimwiki/">vimwiki</a> </p>
+
+<h2>Details</h2>
+
+<p>TODO: Tidy up this section</p>
+
+<p>A "wiki" is, to wwvim, a dir containing a file for each wiki entry, with the file extension .wiki. The dir can have any name. The dir may well contain other files, but wwvim will ignore them. </p>
+
+<p>Wiki entries are located by lower-casing the word, appending .wiki, and looking for a file of that name in the same directory as the current file (this need not be the working directory).</p>
+
+<p>wwvim provides the GoToWikiEntry(entryname) function which you can use if desired.</p>
+
+<h2>TODO</h2>
+
+<ul>
+<li>Highlighting of WikiWords (and possibly detect which entries already)</li>
+<li>Find a way to deal with the markdown/wiki filetype issue (ie a file can only have one type)</li>
+<li>Bug fixes</li>
+</ul>
