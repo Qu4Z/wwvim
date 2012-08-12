@@ -9,7 +9,7 @@ wwvim aims to be a very light-weight implementation of a vim [personal wiki][per
 Getting Started
 ---------------
 
-To install wwvim, use Tim Pope's excellent [pathogen][pathogen] plugin. Just checkout this repository into ~/.vim/bundle/wwvim
+To install wwvim, use Tim Pope's excellent [pathogen][pathogen] plugin. Just clone this repository into ~/.vim/bundle/wwvim
 
 To create a new wiki, make a directory anywhere. Inside this, create a file called index.wiki. Open it in vim. 
 
@@ -63,7 +63,9 @@ wwvim provides the GoToWikiEntry(entryname) function which you can use if desire
 TODO
 ----
 
- - Highlighting of WikiWords (and possibly detect which entries already)
+ - Documentation
+ - Make shortcuts work in visual-mode
  - Find a way to deal with the markdown/wiki filetype issue (ie a file can only have one type)
+ - Highlighting of WikiWords (and possibly detect which entries already)
  - Bug fixes
 
