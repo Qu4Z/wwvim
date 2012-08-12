@@ -1,1 +1,1 @@
-au BufNewFile,Bufread *.pn setfiletype wiki
+au BufNewFile,Bufread *.wiki setfiletype wiki
