@@ -1,4 +1,4 @@
-function! GoToWikiEntry(entry)
-	execute "edit" expand('%:p:h') . "/" . tolower(a:entry) . ".wiki"
+function! GoToWikiEntry(entry, method)
+	execute a:method . expand('%:p:h') . "/" . tolower(a:entry) . ".wiki"
 endfunction
 
