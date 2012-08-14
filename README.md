@@ -39,9 +39,11 @@ This is a buffer local mapping, and only applies to files with the .wiki extensi
 
 If an entry does not exist, it will be created (although technically not unless you save the file).
 
-To go back to the previous entry, use Ctrl-O (see also :help jumplist)
+use Ctrl-O/Ctrl-I to go back and forth between entries (see also :help jumplist)
 
 You can also use Ctrl-] (go to tag) to the same effect.
+
+:r!ls writes an index of the wiki files inside the current folder to the open file.
 
 There is no change tracking built in -- use git or hg (or darcs or bzr or svn or ...)
 
