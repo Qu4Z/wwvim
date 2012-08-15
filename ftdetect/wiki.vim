@@ -1,1 +1,2 @@
-au BufNewFile,Bufread *.wiki setfiletype wiki
+au BufNewFile,BufRead *.md.wiki setfiletype md.wiki
+au BufNewFile,BufRead *.wiki setfiletype wiki
