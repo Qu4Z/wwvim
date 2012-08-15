@@ -39,7 +39,7 @@ This is a buffer local mapping, and only applies to files with the .wiki extensi
 
 If an entry does not exist, it will be created (although technically not unless you save the file).
 
-use Ctrl-O/Ctrl-I to go back and forth between entries (see also :help jumplist)
+Use Ctrl-O/Ctrl-I to go back and forth between entries (see also :help jumplist)
 
 You can also use Ctrl-] (go to tag) to the same effect.
 
