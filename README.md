@@ -41,7 +41,7 @@ If an entry does not exist, it will be created (although technically not unless 
 
 Use Ctrl-O/Ctrl-I to go back and forth between entries (see also :help jumplist)
 
-You can also use Ctrl-] (go to tag) to the same effect.
+You can also use Ctrl-] (go to tag) to go to a wiki entry.
 
 :r!ls writes an index of the wiki files inside the current folder to the open file.
 
@@ -68,6 +68,5 @@ TODO
  - Documentation
  - Make shortcuts work in visual-mode
  - Find a way to deal with the markdown/wiki filetype issue (ie a file can only have one type)
- - Highlighting of WikiWords (and possibly detect which entries already)
  - Bug fixes
 
