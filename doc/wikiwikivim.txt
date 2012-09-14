@@ -1,1 +1,57 @@
-TODO
+wikiwikivim.txt		For Vim version 7.3		Last change: 2012 Sept 14
+
+Using WikiWikiVim									*wwvim* *wikiwikivim*
+
+1. Getting Started			|wwvim-starting|
+2. Usage					|wwvim-usage|
+
+==============================================================================
+1. Getting Started									*wwvim-starting*
+
+To create a new wiki, make a directory anywhere. Inside this, create a file 
+called index.wiki. Open it. 
+
+This is your home entry. (It may be called anything; index is the convention)
+
+Type the following into it, then save:
+>
+	This is the home-entry of my wiki.
+
+	I can go to AnotherWikiPage from here.
+<
+Now position your cursor over the text AnotherWikiPage and press Enter.
+
+wwvim will take you to the wiki entry for AnotherWikiPage. Edit this to your 
+heart's content, save, and press Ctrl-O. Ctrl-O takes you back to previous 
+locations. If you've moved around AnotherWikiPage a lot, you may have to press 
+it multiple times. Soon you'll be back on the index page.
+
+Congratulations! You've just made your own personal wiki. 
+
+==============================================================================
+2. Usage												*wwvim-usage*
+
+Pressing <CR> will take you to the wiki entry for that word. (any word can 
+have a wiki entry). This is a buffer local mapping, and only applies to files 
+with the .wiki extension.
+
+If an entry does not exist, it will be created (when you save the file).
+
+Use Ctrl-O/Ctrl-I to go back and forth between entries (see also |jumplist|)
+Note that by default you can't jump away from unsaved changes (see |hidden|)
+
+You can also use Ctrl-] (go to tag) to go to a wiki entry.
+
+There is no change tracking built in -- use git or hg (or darcs or svn or ...)
+
+wwvim does not specify a format for your entries. I use plaintext, but one 
+could also use markdown or a number of other excellent solutions. 
+Unfortunately, wwvim currently relies on the filetype being set to wiki, 
+which breaks markdown syntax highlighting. This will hopefully be fixed in a 
+future version.
+
+For a more "complete" implementation of personal wikis in vim, consider 
+vimwiki (https://code.google.com/p/vimwiki/)
+
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:
