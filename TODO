@@ -1,0 +1,19 @@
+Active
+------
+
+ - Fix GoToWikiPage on blank space
+ 	o invalid wikipage is fixed (eg '-.wiki')
+ - Multiple filetype issue (work for .md files?)
+
+Completed
+---------
+
+ o Documentation (README.md, :help wikiwikivim)
+  o README.md
+  o doc/wikiwikivim
+ o Consider symlink/external wiki issue.
+ o Consider the lower-case issue
+ o Highlight WikiWord-s
+ o Make keymappings buffer-local
+ o Package vimwiki properly (pathogen friendly)
+ o Upload to github

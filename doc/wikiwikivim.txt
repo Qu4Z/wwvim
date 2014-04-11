@@ -1,12 +1,12 @@
-wikiwikivim.txt		For Vim version 7.3		Last change: 2012 Sept 14
+wikiwikivim.txt	For Vim version 7.3	Last change: 2014 Apr 11
 
-Using WikiWikiVim									*wwvim* *wikiwikivim*
+Using WikiWikiVim					  *wwvim* *wikiwikivim*
 
 1. Getting Started			|wwvim-starting|
-2. Usage					|wwvim-usage|
+2. Usage				|wwvim-usage|
 
 ==============================================================================
-1. Getting Started									*wwvim-starting*
+1. Getting Started					     *wwvim-starting*
 
 To create a new wiki, make a directory anywhere. Inside this, create a file 
 called index.wiki. Open it. 
@@ -29,13 +29,12 @@ it multiple times. Soon you'll be back on the index page.
 Congratulations! You've just made your own personal wiki. 
 
 ==============================================================================
-2. Usage												*wwvim-usage*
+2. Usage							*wwvim-usage*
 
-Pressing <CR> will take you to the wiki entry for that word. (any word can 
-have a wiki entry). This is a buffer local mapping, and only applies to files 
-with the .wiki extension.
+When editing a .wiki file, any WikiWords are automatically converted into
+links. Pressing <CR> on one will take you to that wiki entry. 
 
-If an entry does not exist, it will be created (when you save the file).
+If an entry does not exist, it will be created.
 
 Use Ctrl-O/Ctrl-I to go back and forth between entries (see also |jumplist|)
 Note that by default you can't jump away from unsaved changes (see |hidden|)
@@ -43,6 +42,15 @@ Note that by default you can't jump away from unsaved changes (see |hidden|)
 You can also use Ctrl-] (go to tag) to go to a wiki entry.
 
 There is no change tracking built in -- use git or hg (or darcs or svn or ...)
+
+wwvim supports inter-wiki links. If you open a symlink to a page on another 
+wiki wwvim will switch to browsing that wiki, starting on the page specified. 
+For instance, if you execute
+>
+	ln -s ../anotherwiki/index.wiki theotherwiki.wiki
+<
+any references to TheOtherWiki will become links to the index of that wiki,
+working as expected. 
 
 wwvim does not specify a format for your entries. I use plaintext, but one 
 could also use markdown or a number of other excellent solutions. 

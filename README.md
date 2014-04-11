@@ -33,23 +33,23 @@ Congratulations! You've just made your own personal wiki.
 Usage
 -----
 
-Pressing &lt;CR&gt; will take you to the wiki entry for that word. (any word can have a wiki entry)
+When editing a .wiki file, any [WikiWords][WikiWord] are automatically converted into links. Pressing &lt;CR&gt; on one will take you to that wiki entry. 
 
-This is a buffer local mapping, and only applies to files with the .wiki extension. 
+If an entry does not exist, it will be created.
 
-If an entry does not exist, it will be created (although technically not unless you save the file).
-
-Use Ctrl-O/Ctrl-I to go back and forth between entries (see also :help jumplist)
+Use Ctrl-O/Ctrl-I to go back and forth between entries (see also [:help jumplist][jumplist])
 
 You can also use Ctrl-] (go to tag) to go to a wiki entry.
 
-:r!ls writes an index of the wiki files inside the current folder to the open file.
-
 There is no change tracking built in -- use git or hg (or darcs or bzr or svn or ...)
+
+wwvim supports inter-wiki links. If you open a symlink to a page on another wiki wwvim will switch to browsing that wiki, starting on the page specified. For instance, if you execute `` ln -s ../anotherwiki/index.wiki theotherwiki.wiki `` any references to TheOtherWiki will become links to the index of that wiki, working as expected. 
 
 wwvim does not specify a format for your entries. I use plaintext, but one could also use markdown or a number of other excellent solutions. Unfortunately, wwvim currently relies on the filetype being set to wiki, which breaks markdown syntax highlighting. This will hopefully be fixed in a future version. 
 
 For a more "complete" implementation of personal wikis in vim, consider [vimwiki](https://code.google.com/p/vimwiki/) 
+
+[WikiWord]: http://c2.com/cgi/wiki?WikiWord
 
 Details
 -------
