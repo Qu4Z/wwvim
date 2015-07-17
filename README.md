@@ -47,7 +47,7 @@ wwvim supports inter-wiki links. If you open a symlink to a page on another wiki
 
 wwvim does not specify a format for your entries. I use plaintext, but one could also use markdown or a number of other excellent solutions. Unfortunately, wwvim currently relies on the filetype being set to wiki, which breaks markdown syntax highlighting. This will hopefully be fixed in a future version. 
 
-For a more "complete" implementation of personal wikis in vim, consider [vimwiki](https://code.google.com/p/vimwiki/) 
+For a more "complete" implementation of personal wikis in vim, consider [vimwiki](https://github.com/vimwiki/vimwiki) 
 
 [WikiWord]: http://c2.com/cgi/wiki?WikiWord
 

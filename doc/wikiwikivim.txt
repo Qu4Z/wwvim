@@ -59,7 +59,7 @@ which breaks markdown syntax highlighting. This will hopefully be fixed in a
 future version.
 
 For a more "complete" implementation of personal wikis in vim, consider 
-vimwiki (https://code.google.com/p/vimwiki/)
+vimwiki (https://github.com/vimwiki/vimwiki)
 
 ==============================================================================
  vim:tw=78:ts=8:ft=help:norl:
